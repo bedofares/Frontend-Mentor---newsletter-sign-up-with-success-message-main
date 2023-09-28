@@ -1,0 +1,312 @@
+@font-face {
+    font-family: RobotoBold;
+    src: url("./assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+
+:root {
+    --primary: #232742;
+    --secondary: #ffffff;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #36384d;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.display {
+    display: none !important;
+}
+
+main {
+    min-height: calc(100vh - 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-form-container {
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    border-radius: 20px;
+    color: var(--primary);
+    font-family: "Roboto";
+    box-sizing: border-box;
+}
+
+.child1 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0 3rem;
+    justify-content: center;
+    flex-basis: 70%;
+}
+
+
+.title {
+    font-family: "RobotoBold";
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.list img {
+    width: 1.2rem;
+}
+
+.list p {
+    margin-left: 1rem;
+}
+
+.list-wrapper {
+    margin-top: 1rem;
+}
+
+.formArea {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.email {
+    font-family: "RobotoBold";
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.labels {
+    display: flex;
+    flex-direction: row;
+}
+
+.error {
+    font-family: "RobotoBold";
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    color: #FF6644;
+    margin-left: auto;
+    display: none;
+}
+
+.emailInput {
+    padding: 0.8rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.formArea .subscribeBtn {
+    margin-top: 1rem;
+    border-radius: 8px;
+    padding: 1rem;
+    color: white;
+    background-color: #232742;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: "RobotoBold";
+    font-size: 1.2rem;
+}
+
+.formArea .subscribeBtn:hover {
+    background: linear-gradient(90deg,
+            rgba(255, 84, 120, 1) 0%,
+            rgba(255, 102, 68, 1) 35%);
+}
+
+.invalid {
+    background-color: hsl(4, 100%, 95%);
+    border-color: hsl(4, 100%, 67%);
+    color: hsl(4, 100%, 67%);
+}
+
+.child2 {
+    border-radius: 15px;
+    order: 2;
+    flex-basis: 30%;
+}
+
+.child2 img {
+    display: block;
+    content: url('./assets/images/illustration-sign-up-desktop.svg');
+
+}
+
+
+
+.success-dialog {
+    background-color: white;
+    border-radius: 20px;
+    color: #232742;
+    max-width: 25%;
+    /* height: 90vh; */
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    box-sizing: border-box;
+}
+
+
+.success-icon img {
+    width: 2.5rem;
+}
+
+.success-dialog h1 {
+    font-family: "RobotoBold";
+    margin-top: 1rem;
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.sucess-message {
+    font-family: "Roboto";
+    color: var(--primary);
+    margin-top: 1rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+.success-dialog .dismiss-btn {
+    border-radius: 8px;
+    padding: 0.8rem;
+    color: white;
+    background-color: var(--primary);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: "RobotoBold";
+    font-size: 1rem;
+}
+
+.success-dialog .dismiss-btn:hover {
+    background: linear-gradient(90deg,
+            rgba(255, 84, 120, 1) 0%,
+            rgba(255, 102, 68, 1) 35%);
+}
+
+
+footer {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 0.8rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: rgba(255, 102, 68, 1);
+}
+
+
+
+@media (max-width: 1350px) {
+    .success-dialog {
+        max-width: 35%;
+        padding: 3rem 3rem;
+    }
+}
+
+@media (max-width: 1150px) {
+    .title {
+        font-size: 2.6rem;
+        margin-top: 0;
+    }
+
+    .news-form-container {
+        flex-direction: column;
+        min-height: calc(100vh - 5rem);
+        padding: 0;
+    }
+
+    .child1 {
+        order: 2;
+        padding: 1rem 1.5rem;
+        padding-top: 1.2rem;
+        min-height: 50vh;
+    }
+
+    .child2 {
+        order: 1;
+        border-radius: 0 0px 15px 15px;
+    }
+
+    .child2 img {
+        content: url('./assets/images/illustration-sign-up-mobile.svg');
+        width: 100%;
+    }
+
+    .formArea {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .success-dialog {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 750px) {
+    .success-dialog {
+        max-width: 65%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .success-dialog {
+        max-width: 100%;
+        min-height: calc(100vh - 5rem);
+        border-radius: 0;
+        padding: 7rem 3rem;
+        padding-bottom: 1rem;
+    }
+
+    .success-dialog button {
+        margin-top: auto;
+    }
+}
