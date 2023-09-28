@@ -44,7 +44,7 @@
               <p>And much more!</p>
             </div>
           </div>
-          <form action="#">
+          <form  onsubmit="return validateEmail()">
           <div class="formArea">
             <div class="labels">
               <label class="email" for="email">Email address</label>
@@ -60,7 +60,6 @@
               aria-describedby="error"
             />
             <input
-              onclick="validateEmail()"
               class="subscribeBtn"
               type="submit"
               value="Subscribe to monthly newsletter"

@@ -34,9 +34,11 @@ function validateEmail() {
     emailInputError.style.display = "none";
     emailInput.setAttribute("aria-invalid", "false");
     emailInput.removeAttribute("aria-describedby");
+    return false;  // Allow form submission
   } else {
     emailInput.classList.add("invalid");
     emailInput.setAttribute("aria-invalid", "true");
     emailInputError.style.display = "inherit";
+    return false;  // Prevent form submission
   }
 }
