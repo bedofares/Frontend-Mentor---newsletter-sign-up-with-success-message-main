@@ -12,10 +12,12 @@ function dismissSuccessDialog() {
  * Subscribe mail and navigate to success dialog
  */
 function subscribeMail() {
+  const emailInput = document.getElementById("email").value;
   const successDialog = document.getElementById("success-dialog");
   const newsForm = document.getElementById("newsForm");
   successDialog.style.display = "inherit";
   newsForm.style.display = "none";
+  document.getElementById("user-email-confirm").innerHTML = emailInput;
 }
 
 /**
@@ -34,11 +36,11 @@ function validateEmail() {
     emailInputError.style.display = "none";
     emailInput.setAttribute("aria-invalid", "false");
     emailInput.removeAttribute("aria-describedby");
-    return false;  // Allow form submission
+    return false; // Allow form submission
   } else {
     emailInput.classList.add("invalid");
     emailInput.setAttribute("aria-invalid", "true");
     emailInputError.style.display = "inherit";
-    return false;  // Prevent form submission
+    return false; // Prevent form submission
   }
 }
